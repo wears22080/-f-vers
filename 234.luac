@@ -1,1 +1,1 @@
-ocal windowWidth, windowHeight = 390, 520
+local windowWidth, windowHeight = 390, 520
