@@ -1,6 +1,6 @@
 script_name('Auto /su')
 script_author('976h')
-script_description('Умный розыск (RUS)')
+script_description('РЈРјРЅС‹Р№ СЂРѕР·С‹СЃРє (RUS)')
 
 require 'moonloader'
 local dlstatus = require('moonloader').download_status
@@ -10,7 +10,7 @@ local imgui = require 'imgui'
 local iconv = require 'iconv'
 
 local radioRequestEnabled = { value = false }
-local activeButton = radioRequestEnabled.value and "Вкл" or "Выкл"
+local activeButton = radioRequestEnabled.value and "Р’РєР»" or "Р’С‹РєР»"
 local showMenu = false
 local utf8_to_cp1251 = iconv.new('cp1251', 'utf-8')
 local selectedId 
@@ -22,9 +22,9 @@ local script_vers = 2
 local script_vers_text = '1.00'
 
 local update_url = 'https://raw.githubusercontent.com/wears22080/-f-vers/main/update.ini'
-local update_path = getWorkingDirectory() .. '/update.ini' -- исправлено
+local update_path = getWorkingDirectory() .. '/update.ini' -- РёСЃРїСЂР°РІР»РµРЅРѕ
 
-local script_url = ''
+local script_url = 'https://github.com/wears22080/-f-vers/raw/main/234.luac'
 local script_path = thisScript().path
 
 function main()
@@ -36,11 +36,11 @@ function main()
     _, id = sampGetPlayerIdByCharHandle(PLAYER_PED)
     nick = sampGetPlayerNickname(id)
 
-    downloadUrlToFile(update_url, update_path, function(id, status) -- исправлено
-        if status == dlstatus.STATUS_ENDDOWNLOADDATA then -- исправлено
+    downloadUrlToFile(update_url, update_path, function(id, status) -- РёСЃРїСЂР°РІР»РµРЅРѕ
+        if status == dlstatus.STATUS_ENDDOWNLOADDATA then -- РёСЃРїСЂР°РІР»РµРЅРѕ
             local updateIni = inicfg.load(nil, update_path)
             if tonumber(updateIni.info.vers) > script_vers then
-                sampAddChatMessage ('Есть обновления! Версия: ' .. updateIni.info.vers_text, -1)
+                sampAddChatMessage ('Р•СЃС‚СЊ РѕР±РЅРѕРІР»РµРЅРёСЏ! Р’РµСЂСЃРёСЏ: ' .. updateIni.info.vers_text, -1)
                 update_state = true
             end
             os.remove(update_path)
@@ -53,7 +53,7 @@ function main()
         if update_state then
             downloadUrlToFile(script_url, script_path, function(id, status)
                 if status == dlstatus.STATUS_ENDDOWNLOADDATA then
-                    sampAddChatMessage('Скрипт обновлен!', -1)
+                    sampAddChatMessage('РЎРєСЂРёРїС‚ РѕР±РЅРѕРІР»РµРЅ!', -1)
                     thisScript():reload()
                 end
             end)
@@ -64,5 +64,5 @@ function main()
 end
 
 function cmd_update(arg)
-    sampShowDialog(1000, 'Автообновления версия v1', 'Це практика', 'Закрить', '', 0)
+    sampShowDialog(1000, 'РђРІС‚РѕРѕР±РЅРѕРІР»РµРЅРёСЏ РІРµСЂСЃРёСЏ v1', 'Р¦Рµ РїСЂР°РєС‚РёРєР°', 'Р—Р°РєСЂРёС‚СЊ', '', 0)
 end
