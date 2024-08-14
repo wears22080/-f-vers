@@ -2,13 +2,30 @@
     "window": {
         "width": 800,
         "height": 689,
-        "posX": 0.5,
-        "posY": 0.5,
         "title": "##My window"
     },
+    "infoWindow": {
+        "width": 450,
+        "height": 490,
+        "title": "Info Window"
+    },
     "text": {
-        "info": "Здесь ваш информационный текст.",
-        "buttonColor": [1.0, 0.0, 0.0, 1.0],
-        "textColor": [1.0, 1.0, 0.0, 1.0]
+        "main": "->Автор - 976h<- ->Дискорд - 976h<-",
+        "version": "v1.5",
+        "info": "Версия скрипта: ",
+        "selectedPlayer": "Выбран игрок: ",
+        "searchPlaceholder": "Поиск:",
+        "radioRequestOn": "Вкл",
+        "radioRequestOff": "Выкл"
+    },
+    "colors": {
+        "text": {
+            "default": [1.0, 1.0, 0.0, 1.0],
+            "highlight": [1.0, 0.5, 0.0, 1.0]
+        },
+        "button": {
+            "default": [1.0, 0.0, 0.0, 1.0],
+            "disabled": [0.5, 0.5, 0.5, 1.0]
+        }
     }
 }
