@@ -1,12 +1,12 @@
 {
-    "text": "Это пример.",
-    "xOffset": 10,
-    "yOffset": 20,
-    "textSize": 20,
-    "textColor": {
-        "r": 0.0,
-        "g": 0.5,
-        "b": 1.0,
-        "a": 1.0
+    "window": {
+        "width": 600,
+        "height": 400
+    },
+    "text": {
+        "content": "Это информация.",
+        "size": 16,
+        "x": 20,
+        "y": 20
     }
 }
