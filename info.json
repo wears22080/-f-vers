@@ -3,7 +3,7 @@
         "width": 600,
         "height": 400
     },
-    "alignment": "center",  // Вы можете изменить это на "left" или "right"
+    "alignment": "center",
     "content": [
         {
             "type": "header",
