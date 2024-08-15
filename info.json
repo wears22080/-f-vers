@@ -1,12 +1,8 @@
 {
-    "window": {
-        "width": 600,
-        "height": 400
+    "fontSize": 30,
+    "textPosition": {
+        "x": 100,
+        "y": 50
     },
-    "text": {
-        "content": "Это информация.",
-        "size": 16,
-        "x": 20,
-        "y": 20
-    }
+    "text": "Ваш здесь"
 }
