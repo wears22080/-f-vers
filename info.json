@@ -8,19 +8,19 @@
             "type": "header",
             "text": "Информация",
             "size": 24,
-            "indent": 0.0
+            "offset": 0 
         },
         {
             "type": "paragraph",
             "text": "Это пример текста для параграфа. Здесь можно добавить любое описание.",
             "size": 16,
-            "indent": 1
+            "offset": 10
         },
         {
             "type": "paragraph",
             "text": "Этот текст также будет отображен как параграф.",
             "size": 16,
-            "indent": 2
+            "offset": 10
         }
     ]
 }
